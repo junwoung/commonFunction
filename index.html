@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>common function</title>
+    <script src="common.js"></script>
+</head>
+<body>
+    <script>
+        var names = ['wangjun','wangjun8','wangjun','wangjun10','wangjun8','zhengpeixn','maxinxi','licong'];
+        var ages = [2,1,3,4,2,5,3,8,-111,33,44,22,33,111];
+        var alls = ['wangjun','wangjun8',2,1,3,4,2,5,3,8,'wangjun','wangjun10',8,111,33,44,22,33];
+        console.log(names.length+ ' '+ ages.length+ ' '+alls.length);
+        let names2 = window.util.removeDuplicate(names);
+        let ages2 = window.util.removeDuplicate(ages);
+        let alls2 = window.util.removeDuplicate(alls);
+        console.log(names2);
+        console.log(ages2);
+        console.log(alls2);
+        console.log(util);
+        let age3 = util.sort(ages);
+        let age4 = ages.sort();
+        let name3 = names.sort();
+        console.log(age3);
+        console.log(name3);
+        console.log(age4);
+//        let flat_arr = [ages,names,alls];
+        let flat_arr = [3,[4,8,[9,1],3],[6,8],[2,10],5,7];
+        let flat = util.flatten(flat_arr);
+        console.log(flat_arr);
+        console.log(flat);
+        let copy = util.copy(flat_arr);
+        copy[0] = 'wangjun';
+        console.log(copy);
+        console.log(flat_arr);
+
+        let str = 'hello';
+        console.log(str.split(''))
+        console.log([...str])
+        console.log(Math.max.apply(null,ages));
+        console.log(Math.min(...ages))
+    </script>
+</body>
+</html>
